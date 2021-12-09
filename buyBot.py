@@ -73,10 +73,12 @@ sender_address,
 ).buildTransaction({
 'from': sender_address,
 'value': web3.toWei(bnb_amount,'ether'),#This is the Token(BNB) amount you want to Swap from
-'gas': 500000,
-'gasPrice': web3.toWei('100','gwei'),
+'gas': 700000,
+'gasPrice': web3.toWei('600','gwei'),
 'nonce': nonce,
 })
+    #gasprice 100 gwei
+    #gas 500000
     
 signed_txn = web3.eth.account.sign_transaction(pancakeswap2_txn, private_key=my_private_key)
 tx_token = web3.eth.send_raw_transaction(signed_txn.rawTransaction)

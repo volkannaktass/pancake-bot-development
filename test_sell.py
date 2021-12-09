@@ -74,10 +74,30 @@ symbol = sellTokenContract.functions.symbol().call()
 readable = web3.fromWei(balance,'ether')
 print("Balance: " + str(readable) + " " + symbol)
 
+rdb = str(readable)
+rdbfloat = float(rdb)
+rdbint = int(rdbfloat)
 
+tmp = 0
+percentageAsk = float(input("Enter amount of " + symbol + " you want to sell 1/2/3/ or enter amount: "))
 
+if(percentageAsk == 1):
+    tmp = rdbint*0.25
+    print(tmp)
+elif(percentageAsk == 2):
+    tmp = rdbint*0.50
+    print(tmp)
+elif(percentageAsk == 3):
+    tmp = rdbint*0.75
+    print(tmp)
+else:
+    tmp = percentageAsk
+    print(tmp)
 #Enter amount of token to sell
-tokenValue = web3.toWei(input("Enter amount of " + symbol + " you want to sell: "), 'ether')
+
+
+tokenValue = web3.toWei(tmp, 'ether')
+
 
 #Approve Token before Selling
 tokenValue2 = web3.fromWei(tokenValue, 'ether')

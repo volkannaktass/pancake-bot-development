@@ -1,0 +1,1 @@
+{"senderAddress": "0xd6602Be4a9fC7FD6A7768ECE0811600eb3b3EE14", "privateKeyBar": "0xefd3bc7482c8c3d7e612a68f3a9de4b2e2b0ab0731e7af131e33cb58a585a6eb", "bnbAmount": "0.3"}
